@@ -470,8 +470,7 @@ export const offer = {
     'Short handoff note for developers or next steps',
   ],
   timeline: '1–2 weeks',
-  price: '₹18,000–35,000 introductory (fixed scope)',
-  note: '50% upfront. Scope is one focused product concept or feature set. Not full production engineering.',
+  note: 'The sprint is scoped around one focused product concept or feature set. It covers product definition and validation-stage prototyping, not full production engineering.',
   cta: 'Email me a 2-sentence description of the problem',
   evidence: 'Process demonstrated in ScopeGuard (discovery → prototype) and PayorLens (governance & evaluation).',
 };
