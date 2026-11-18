@@ -11,16 +11,16 @@ import Intro from '../components/Intro';
 import SmoothScroll from '../components/SmoothScroll';
 import { site } from '../content/site';
 
-const title = 'Halley Patel | AI Product Manager';
-const description = 'AI Product Manager and technical product builder. I turn complex problems into products that make better decisions.';
+const title = 'Halley Patel | AI Product Builder';
+const description = 'AI Product Builder helping founders define MVPs, design AI workflows and create testable low-code prototypes.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: title, template: '%s | Halley Patel' },
   description,
-  keywords: ['AI Product Manager', 'Technical Product Management', 'AI Product Strategy', 'AI Evaluation', 'Halley Patel'],
+  keywords: ['AI Product Builder', 'AI MVP Scoping', 'AI Workflow Design', 'Low-code Prototyping', 'Product Discovery', 'Halley Patel'],
   authors: [{ name: 'Halley Patel' }],
-  openGraph: { type: 'website', url: '/', siteName: 'Halley Patel', title, description, images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Halley Patel, AI Product Manager' }] },
+  openGraph: { type: 'website', url: '/', siteName: 'Halley Patel', title, description, images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Halley Patel, AI Product Builder' }] },
   twitter: { card: 'summary_large_image', title, description, images: ['/og.jpg'] },
   icons: { icon: '/favicon.svg' },
 };
