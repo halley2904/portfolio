@@ -239,16 +239,6 @@ export default function Home() {
                   ))}
                 </ol>
               </div>
-              <div className="grid grid-cols-2 gap-5 border-t border-txt/10 px-7 py-6 md:px-8">
-                <div>
-                  <p className="eyebrow text-txt-faint">Timeline</p>
-                  <p className="mt-2 font-serif text-[22px] text-txt">{offer.timeline}</p>
-                </div>
-                <div>
-                  <p className="eyebrow text-txt-faint">Introductory price</p>
-                  <p className="mt-2 font-serif text-[20px] leading-tight text-txt">{offer.price}</p>
-                </div>
-              </div>
               <div className="border-t border-txt/10 px-7 py-6 md:px-8">
                 <p className="text-[13px] leading-relaxed text-txt-muted">{offer.note}</p>
                 <p className="mt-3 text-[13px] leading-relaxed text-txt-muted">{offer.evidence}</p>
