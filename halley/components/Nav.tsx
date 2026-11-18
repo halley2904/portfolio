@@ -7,6 +7,7 @@ const LINKS = [
   ['About', '/#about'],
   ['Approach', '/#approach'],
   ['Work', '/#work'],
+  ['Work with me', '/#work-with-me'],
   ['Evaluation', '/#evaluation'],
   ['Thinking', '/#thinking'],
   ['Contact', '/#contact'],
@@ -57,9 +58,9 @@ export default function Nav() {
             <span className="grid h-8 w-8 place-items-center rounded-full border border-current/30 font-serif text-[14px] italic">hp</span>
             <span className="font-serif text-[19px] tracking-[-0.02em]">Halley Patel</span>
           </a>
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Main">
             {LINKS.map(([l, h]) => (
-              <a key={l} href={to(h, path)} className={`navlink text-[14px] font-medium transition-opacity hover:opacity-100 ${active === h.split('#')[1] ? 'on opacity-100' : 'opacity-70'}`}>{l}</a>
+              <a key={l} href={to(h, path)} className={`navlink text-[13.5px] font-medium transition-opacity hover:opacity-100 ${active === h.split('#')[1] ? 'on opacity-100' : 'opacity-70'}`}>{l}</a>
             ))}
             <a href={resumeLink(path).href} target="_blank" rel="noopener noreferrer" className={`btn !px-4 !py-2 text-[13.5px] ${dark ? 'bg-mint text-ink hover:bg-mint-glow' : 'bg-ink text-cream hover:bg-sage-deep'}`} >
               Résumé
@@ -74,7 +75,7 @@ export default function Nav() {
       <div className={`fixed inset-0 z-40 bg-ink text-cream transition-[clip-path] duration-700 ease-soft lg:hidden ${open ? '[clip-path:circle(150%_at_100%_0)]' : '[clip-path:circle(0%_at_100%_0)]'}`} data-dark>
         <nav className="wrap flex h-full flex-col justify-center gap-2 pt-16" aria-label="Mobile">
           {LINKS.map(([l, h], i) => (
-            <a key={l} href={to(h, path)} onClick={() => setOpen(false)} className="font-serif text-[44px] leading-[1.15] tracking-[-0.03em]" style={{ transition: `opacity .6s ${0.15 + i * 0.05}s, transform .6s ${0.15 + i * 0.05}s`, opacity: open ? 1 : 0, transform: open ? 'none' : 'translateY(16px)' }}>
+            <a key={l} href={to(h, path)} onClick={() => setOpen(false)} className="font-serif text-[40px] leading-[1.15] tracking-[-0.03em]" style={{ transition: `opacity .6s ${0.15 + i * 0.05}s, transform .6s ${0.15 + i * 0.05}s`, opacity: open ? 1 : 0, transform: open ? 'none' : 'translateY(16px)' }}>
               {l}
             </a>
           ))}
