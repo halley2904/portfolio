@@ -1,4 +1,4 @@
-import { resumeLink, site, to, evaluation, about } from '../content/site';
+import { resumeLink, site, to, evaluation, about, offer } from '../content/site';
 import HeroPortrait from '../components/HeroPortrait';
 import CaseFile from '../components/CaseFile';
 import WorkGrid from '../components/WorkGrid';
@@ -49,7 +49,7 @@ export default function Home() {
           <div>
             <p className="rv eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-cream-muted">
               <span className="relative inline-flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-mint/60" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>
-              Open to AI product roles
+              AI product builder · Project collaborations
             </p>
             <p className="rv mt-6 font-serif text-[22px] italic text-mint" style={{ ['--d' as string]: '.05s' }}>Hi, I&apos;m Halley.</p>
             <h1 className="reveal-group mt-3 font-serif text-[clamp(40px,5.3vw,80px)] leading-[0.98] tracking-[-0.045em]">
@@ -64,7 +64,7 @@ export default function Home() {
                   <svg className="arr-r" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </a>
               </Magnetic>
-              <Magnetic><a href={r.href} target={r.ext ? "_blank" : undefined} rel="noopener noreferrer" className="btn border border-cream/25 text-cream hover:border-cream/60">{r.label}</a></Magnetic>
+              <Magnetic><a href="#work-with-me" className="btn border border-cream/25 text-cream hover:border-cream/60">Work with me</a></Magnetic>
             </div>
             <div className="rv mt-10" style={{ ['--d' as string]: '.9s' }}><Socials dark /></div>
           </div>
@@ -201,17 +201,74 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* ================= WORK WITH ME ================= */}
+      <section id="work-with-me" className="grain relative scroll-mt-16 bg-paper py-24 md:py-32">
+        <div className="wrap">
+          <Eyebrow n="06" count="One focused engagement">Work with me</Eyebrow>
+          <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_.95fr] lg:items-start">
+            <div>
+              <p className="eyebrow text-sage-deep">{offer.subtitle}</p>
+              <h2 className="reveal-group mt-5 font-serif text-[clamp(38px,5vw,68px)] leading-[1] tracking-[-0.04em]">
+                <Mask text={offer.title} />
+              </h2>
+              <p className="rv mt-7 max-w-[600px] text-[18px] leading-[1.65] text-txt/85">{offer.description}</p>
+              <div className="rv mt-9 flex flex-wrap items-center gap-3">
+                <Magnetic>
+                  <a
+                    href={`mailto:${site.email}?subject=${encodeURIComponent(offer.title)}`}
+                    className="btn group bg-ink text-cream hover:bg-sage-deep"
+                  >
+                    {offer.cta}
+                    <svg className="arr-r" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </a>
+                </Magnetic>
+                <Magnetic><a href="#work" className="btn border border-txt/20 text-txt hover:border-txt/50">See selected work</a></Magnetic>
+              </div>
+            </div>
+
+            <div className="rv overflow-hidden rounded-[26px] border border-txt/10 bg-white/70">
+              <div className="p-7 md:p-8">
+                <p className="eyebrow text-sage-deep">What the sprint includes</p>
+                <ol className="mt-6 space-y-4">
+                  {offer.deliverables.map((item, i) => (
+                    <li key={item} className="flex gap-4">
+                      <span className="pt-0.5 font-mono text-[11px] text-sage-deep">0{i + 1}</span>
+                      <span className="text-[15px] leading-relaxed text-txt/85">{item}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className="grid grid-cols-2 gap-5 border-t border-txt/10 px-7 py-6 md:px-8">
+                <div>
+                  <p className="eyebrow text-txt-faint">Timeline</p>
+                  <p className="mt-2 font-serif text-[22px] text-txt">{offer.timeline}</p>
+                </div>
+                <div>
+                  <p className="eyebrow text-txt-faint">Introductory price</p>
+                  <p className="mt-2 font-serif text-[20px] leading-tight text-txt">{offer.price}</p>
+                </div>
+              </div>
+              <div className="border-t border-txt/10 px-7 py-6 md:px-8">
+                <p className="text-[13px] leading-relaxed text-txt-muted">{offer.note}</p>
+                <p className="mt-3 text-[13px] leading-relaxed text-txt-muted">{offer.evidence}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ================= CONTACT + FOOTER ================= */}
       <section id="contact" className="relative scroll-mt-16 overflow-hidden bg-ink pt-24 text-cream md:pt-32" data-dark>
         <div className="pointer-events-none absolute -left-40 top-20 h-[520px] w-[520px] rounded-full bg-sage/10 blur-[120px]" />
         <div className="pointer-events-none absolute -right-40 bottom-40 h-[420px] w-[420px] rounded-full bg-mint/[.06] blur-[120px]" />
         <div className="wrap relative">
-          <Eyebrow n="06" dark count="Let's talk">Contact</Eyebrow>
+          <Eyebrow n="07" dark count="Let's talk">Contact</Eyebrow>
           <div className="mt-12 grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:items-end">
             <h2 className="reveal-group font-serif text-[clamp(42px,6vw,88px)] leading-[0.98] tracking-[-0.045em]">
               <Mask text="Let's build something that" /> <span className="mask" style={{ ['--d' as string]: '.25s' }}><span className="italic text-mint">decides well.</span></span>
             </h2>
-            <p className="rv max-w-[420px] text-[17px] leading-relaxed text-cream-muted">Open to AI Product Manager and technical product roles, and to conversations with founders building AI products.</p>
+            <p className="rv max-w-[420px] text-[17px] leading-relaxed text-cream-muted">I work with founders and small teams on product definition, AI workflow design and validation-stage prototypes. Have a product problem in mind? Send me a short description and we can see whether a focused sprint is the right next step.</p>
           </div>
 
           <div className="rv mt-14 overflow-hidden rounded-[30px] border border-ink-line bg-ink-2/50">
@@ -230,7 +287,7 @@ export default function Home() {
                   <div className="mt-5"><Socials dark big /></div>
                 </div>
                 <dl className="grid grid-cols-2 gap-4 border-t border-ink-line pt-6 text-[14px]">
-                  <div><dt className="eyebrow text-cream-faint">Status</dt><dd className="mt-2 flex items-center gap-2"><span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-mint/60" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>Open to roles</dd></div>
+                  <div><dt className="eyebrow text-cream-faint">Status</dt><dd className="mt-2 flex items-center gap-2"><span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-mint/60" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>Available for scoped projects</dd></div>
                   <div><dt className="eyebrow text-cream-faint">Local time</dt><dd className="mt-2"><LocalTime /> IST</dd></div>
                 </dl>
               </div>
