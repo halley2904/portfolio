@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { resumeLink, site, to } from '../content/site';
+import { site, to } from '../content/site';
 
 const LINKS = [
   ['About', '/#about'],
@@ -62,8 +62,8 @@ export default function Nav() {
             {LINKS.map(([l, h]) => (
               <a key={l} href={to(h, path)} className={`navlink text-[13.5px] font-medium transition-opacity hover:opacity-100 ${active === h.split('#')[1] ? 'on opacity-100' : 'opacity-70'}`}>{l}</a>
             ))}
-            <a href={resumeLink(path).href} target="_blank" rel="noopener noreferrer" className={`btn !px-4 !py-2 text-[13.5px] ${dark ? 'bg-mint text-ink hover:bg-mint-glow' : 'bg-ink text-cream hover:bg-sage-deep'}`} >
-              Résumé
+            <a href={to('/#contact', path)} className={`btn !px-4 !py-2 text-[13.5px] ${dark ? 'bg-mint text-ink hover:bg-mint-glow' : 'bg-ink text-cream hover:bg-sage-deep'}`}>
+              Discuss a project
             </a>
           </nav>
           <button className="relative h-10 w-10 lg:hidden" onClick={() => setOpen((v) => !v)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>
@@ -79,7 +79,7 @@ export default function Nav() {
               {l}
             </a>
           ))}
-          <a href={resumeLink(path).href} target={resumeLink().ext ? "_blank" : undefined} rel="noopener noreferrer" className="btn mt-8 w-fit bg-mint text-ink">{resumeLink().label}</a>
+          <a href={to('/#contact', path)} onClick={() => setOpen(false)} className="btn mt-8 w-fit bg-mint text-ink">Discuss a project</a>
         </nav>
       </div>
     </>
