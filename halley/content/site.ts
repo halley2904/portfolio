@@ -5,12 +5,12 @@
 
 export const site = {
   name: 'Halley Patel',
-  url: 'https://halleypatel.vercel.app',
-  role: 'AI Product Manager',
-  identity: ['AI Product Manager', 'Technical Product Management', 'AI Product Strategy & Evaluation'],
+  url: 'https://halley-freelance.vercel.app',
+  role: 'AI Product Builder',
+  identity: ['AI Product Builder', 'MVP Strategy & Prototyping', 'AI Workflows & Product Execution'],
   headline: { lead: 'I turn complex problems into products that make', accent: 'better decisions.' },
   statement:
-    'I work at the intersection of product strategy, AI systems and business outcomes, translating ambiguous problems into structured requirements, reliable workflows and measurable product decisions.',
+    'I help founders and small teams turn ambiguous AI product ideas into clearly scoped MVPs, thoughtfully designed AI workflows and testable low-code prototypes — before they commit to full engineering.',
   email: 'halley1837patel@gmail.com',
   linkedin: 'https://www.linkedin.com/in/hp29',
   github: 'https://github.com/halley2904',
@@ -450,8 +450,28 @@ export const about = {
   path: [
     { title: 'Data Science & ML Intern', note: 'Where it started' },
     { title: 'Data Scientist', note: 'Evaluation, pipelines and AI workflows' },
-    { title: 'Next: AI Product Management', note: 'Where I am heading' },
+    { title: 'AI Product Builder', note: 'MVP definition, AI workflows and prototypes' },
   ],
   strengths: ['Product definition', 'AI evaluation', 'Stakeholder collaboration', 'Requirements from domain rules', 'Experiment design'],
-  interests: 'AI product management, technical product strategy, and building products that are genuinely useful.',
+  interests: 'Short product sprints with founders, AI workflow design, and building products that are genuinely useful.',
+};
+
+
+export const offer = {
+  title: 'AI Product Clarity + Prototype Sprint',
+  subtitle: 'From idea to a scoped MVP and testable prototype',
+  description:
+    'I help founders and small teams turn an ambiguous AI product idea into a clear V1 scope, AI workflow design and a clickable or low-code prototype — so you can validate before committing to full engineering.',
+  deliverables: [
+    'Problem framing and primary target user',
+    'Prioritised V1 feature list and core user journey',
+    'AI workflow logic, guardrails and uncertainty handling',
+    '3–6 screen clickable or low-code prototype',
+    'Short handoff note for developers or next steps',
+  ],
+  timeline: '1–2 weeks',
+  price: '₹18,000–35,000 introductory (fixed scope)',
+  note: '50% upfront. Scope is one focused product concept or feature set. Not full production engineering.',
+  cta: 'Email me a 2-sentence description of the problem',
+  evidence: 'Process demonstrated in ScopeGuard (discovery → prototype) and PayorLens (governance & evaluation).',
 };
